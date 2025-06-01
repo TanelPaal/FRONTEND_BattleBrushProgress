@@ -1,0 +1,518 @@
+/* Dark theme variables with better contrast */
+:root {
+	--bs-body-bg: #1a1d20;  /* Slightly lighter dark background */
+	--bs-body-color: #ffffff; /* Brighter text for better readability */
+	--bs-dark: #2c3034; /* Lighter dark shade for components */
+	--bs-dark-rgb: 44, 48, 52;
+	--bs-light: #495057;
+	--bs-light-rgb: 73, 80, 87;
+	--bs-primary: #0d6efd;
+	--bs-link-color: #6ea8fe;
+	--bs-link-hover-color: #8bb9fe;
+	--bs-border-color: #495057; /* More visible borders */
+	--bs-table-color: #ffffff; /* Explicit table text color */
+	--bs-table-bg: #2c3034; /* Lighter background for tables */
+	--bs-table-striped-bg: #343a40; /* Visible striped rows */
+}
+
+html {
+	font-size: 14px;
+	position: relative;
+	min-height: 100%;
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+	box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+	margin-bottom: 60px;
+	background-color: var(--bs-body-bg);
+	color: var(--bs-body-color);
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+	color: var(--bs-secondary-color);
+	text-align: end;
+}
+
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+	text-align: start;
+}
+
+.form-group {
+	margin-bottom: 1em;
+}
+
+a.navbar-brand {
+	white-space: normal;
+	text-align: center;
+	word-break: break-all;
+}
+
+a {
+	color: var(--bs-link-color);
+}
+
+.btn-primary {
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+	color: #ffffff;
+}
+
+.btn-danger {
+	background-color: #dc3545;
+	border-color: #dc3545;
+	color: #ffffff;
+}
+
+.btn-warning {
+	background-color: #ffc107;
+	border-color: #ffc107;
+	color: #000000;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	color: #fff;
+	background-color: #1b6ec2;
+	border-color: #1861ac;
+}
+
+.border-top {
+	border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+	font-size: 1rem;
+	line-height: inherit;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	white-space: nowrap;
+	line-height: 60px;
+	background-color: #2c3034;
+	border-top: 1px solid var(--bs-border-color);
+	color: var(--bs-body-color);
+}
+
+/* Update form controls */
+.form-control {
+	background-color: #2c3034;
+	border-color: #495057;
+	color: #ffffff;
+}
+
+.form-control:focus {
+	background-color: #2c3034;
+	color: #ffffff;
+}
+
+/* Update tables */
+.table {
+	color: var(--bs-table-color) !important; /* Force white text in tables */
+	background-color: var(--bs-table-bg);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: var(--bs-table-striped-bg);
+}
+
+.table thead th {
+	background-color: #343a40;
+	color: #ffffff !important;
+	font-weight: 600;
+	border-color: var(--bs-border-color);
+}
+
+.table tbody td {
+	color: #ffffff !important; /* Force white text in table cells */
+	border-color: var(--bs-border-color);
+}
+
+/* Update cards */
+.card {
+	background-color: #2c3034;
+	border-color: var(--bs-border-color);
+}
+
+.card-title, .card-text {
+	color: #ffffff !important;
+}
+
+/* Update navbar */
+.navbar {
+	background-color: #2c3034 !important;
+	border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar-brand, .nav-link {
+	color: #fff !important;
+}
+
+.navbar-toggler {
+	border-color: var(--bs-border-color);
+}
+
+/* Update buttons */
+.btn-outline-primary {
+	color: var(--bs-link-color);
+	border-color: var(--bs-link-color);
+}
+
+.btn-outline-primary:hover {
+	background-color: var(--bs-link-color);
+	color: var(--bs-dark);
+}
+
+/* Update links */
+a:hover {
+	color: var(--bs-link-hover-color);
+}
+
+/* Update modal */
+.modal-content {
+	background-color: #2c3034;
+	border-color: var(--bs-border-color);
+	color: #ffffff;
+}
+
+.modal-header {
+	border-bottom-color: #495057;
+}
+
+.modal-footer {
+	border-top-color: var(--bs-border-color);
+}
+
+.modal-title {
+	color: #ffffff;
+}
+
+/* Update dropdown menus */
+.dropdown-menu {
+	background-color: #2c3034;
+	border-color: var(--bs-border-color);
+}
+
+.dropdown-item {
+	color: #ffffff !important;
+}
+
+.dropdown-item:hover {
+	background-color: #3a3f44;
+	color: #ffffff !important;
+}
+
+/* Improve text input placeholder contrast */
+::placeholder {
+	color: #6c757d !important;
+	opacity: 1;
+}
+
+/* Add subtle box shadows for depth */
+.card, .dropdown-menu, .modal-content {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Headers and text */
+h1, h2, h3, h4, h5, h6 {
+	color: #ffffff !important;
+}
+
+/* List groups */
+.list-group-item {
+	background-color: #2c3034;
+	color: #ffffff;
+	border-color: var(--bs-border-color);
+}
+
+/* Specific component improvements */
+.miniature-name,
+.paint-name,
+.collection-name,
+.person-name {
+	color: #ffffff !important;
+}
+
+/* ID fields */
+.id-field {
+	color: #a0a0a0 !important; /* Slightly dimmed for IDs */
+}
+
+/* Status indicators */
+.state-indicator {
+	color: #ffffff !important;
+}
+
+/* Paint swatches */
+.paint-swatch {
+	border: 1px solid #495057;
+}
+
+/* Usage type and notes */
+.usage-type,
+.notes {
+	color: #ffffff !important;
+}
+
+/* Dates */
+.date-field {
+	color: #ffffff !important;
+}
+
+/* Headers in all views */
+.view-header {
+	color: #ffffff !important;
+	margin-bottom: 1.5rem;
+}
+
+/* Filter section */
+.filter-section {
+	background-color: #2c3034;
+	padding: 1rem;
+	border-radius: 0.375rem;
+	margin-bottom: 1rem;
+}
+
+/* Dashboard stats */
+.dashboard-stat {
+	color: #ffffff !important;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+/* Feature cards on landing page */
+.feature-card {
+	background-color: #2c3034;
+	border: 1px solid #495057;
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+}
+
+.feature-title {
+	color: #ffffff !important;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.feature-description {
+	color: #ffffff !important;
+}
+
+/* Form labels and text */
+label, .form-label {
+	color: #ffffff !important;
+}
+
+/* Stats and numbers */
+.stats-number {
+	color: #ffffff !important;
+}
+
+/* Filter dropdowns */
+select.form-select {
+	background-color: #2c3034;
+	color: #ffffff;
+	border-color: #495057;
+}
+
+/* Navigation */
+.nav-link {
+	color: #ffffff !important;
+}
+
+.nav-link:hover {
+	color: var(--bs-link-color) !important;
+}
+
+/* Hero section with a darker, more sophisticated color */
+.hero-section {
+	background-color: #2c3e50 !important; /* Darker blue */
+	color: #ffffff !important;
+	padding: 4rem 0;
+}
+
+/* Feature cards */
+.feature-card {
+	background-color: #2c3034;
+	border: none !important;
+	transition: transform 0.2s;
+}
+
+.feature-card:hover {
+	transform: translateY(-5px);
+}
+
+.feature-icon {
+	background-color: #2c3e50 !important; /* Matching hero section */
+	width: 64px;
+	height: 64px;
+}
+
+/* Stats section */
+.stats-section {
+	background-color: #1a1d20 !important; /* Darker background */
+	padding: 3rem 0;
+}
+
+.stats-number {
+	color: #2c3e50 !important; /* Matching theme */
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.stats-label {
+	color: #ffffff !important;
+	font-size: 1.1rem;
+}
+
+/* Call to action section */
+.cta-section {
+	background-color: #2c3e50 !important; /* Matching hero section */
+	border-radius: 8px;
+	padding: 3rem 2rem;
+}
+
+/* Button styles */
+.btn-hero {
+	background-color: #ffffff;
+	color: #2c3e50;
+	border: none;
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	transition: all 0.2s;
+}
+
+.btn-hero:hover {
+	background-color: #f8f9fa;
+	transform: translateY(-2px);
+}
+
+.btn-hero-outline {
+	background-color: transparent;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	transition: all 0.2s;
+}
+
+.btn-hero-outline:hover {
+	background-color: #ffffff;
+	color: #2c3e50;
+}
+
+/* Text improvements */
+.hero-title {
+	color: #ffffff !important;
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+	color: #ffffff !important;
+	font-size: 1.5rem;
+	opacity: 0.9;
+}
+
+.feature-title {
+	color: #ffffff !important;
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.feature-description {
+	color: #e9ecef !important; /* Light gray for better readability */
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+/* Card improvements */
+.card {
+	background-color: #2c3034;
+	border: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+	padding: 2rem;
+}
+
+/* Feature icons */
+.bi {
+	font-size: 1.5rem;
+	color: #ffffff;
+}
+
+/* Dashboard section */
+.dashboard-title {
+	color: #ffffff !important;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.stats-card {
+	background-color: #2c3034;
+	border-radius: 8px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Ensure all text in the hero section is white */
+.hero-section p,
+.hero-section h1,
+.hero-section .lead {
+	color: #ffffff !important;
+}
+
+/* Make muted text more visible */
+.text-muted {
+	color: #e9ecef !important;
+}
+
+/* Update the primary color usage */
+.bg-primary {
+	background-color: #2c3e50 !important;
+}
+
+.text-primary {
+	color: #ffffff !important;
+}
+
+/* Feature section background */
+.features-section {
+	background-color: #1a1d20;
+	padding: 4rem 0;
+}
+
+/* Container backgrounds */
+.container-fluid {
+	background-color: #1a1d20;
+}
